@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import defaultOgImage from '../../assets/images/stevepb-plumbing-840835_1920.jpg'
 
 const SITE_NAME = "Mike's Plumbing"
 
@@ -36,6 +37,7 @@ function Seo({ title, description }) {
     setMeta('property', 'og:type', 'website')
     setMeta('property', 'og:site_name', SITE_NAME)
     setMeta('property', 'og:url', window.location.href)
+    setMeta('property', 'og:image', `${window.location.origin}${defaultOgImage}`)
     setCanonical(`${window.location.origin}${location.pathname}`)
   }, [title, description, location.pathname])
 

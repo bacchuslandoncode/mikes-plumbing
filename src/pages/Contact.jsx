@@ -289,6 +289,7 @@ function Contact() {
         <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Contact' }]} />
         <div className="page-header">
           <SectionHeading
+            level={1}
             eyebrow="Contact"
             title="Contact Mike's Plumbing"
             description="Tell us what's going on and we'll follow up to schedule service."

@@ -27,6 +27,7 @@ function About() {
         <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'About' }]} />
         <div className="page-header">
           <SectionHeading
+            level={1}
             eyebrow="About"
             title="About Mike's Plumbing"
             description="A straightforward, local plumbing business serving the Phoenix area."
