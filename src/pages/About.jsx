@@ -35,7 +35,7 @@ function About() {
       </PageContainer>
 
       {/* Work photograph */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <div className="split-band">
             <div>
@@ -60,7 +60,7 @@ function About() {
       </section>
 
       {/* How customers should be treated */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <SectionHeading
             eyebrow="Our Approach"
@@ -71,7 +71,7 @@ function About() {
       </section>
 
       {/* Straightforward-service principles */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading eyebrow="Principles" title="How We Work" />
           <ServiceProblemList items={principles} icon={Check} />
@@ -79,7 +79,7 @@ function About() {
       </section>
 
       {/* Respect for the home */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <SectionHeading
             eyebrow="In Your Home"
@@ -90,7 +90,7 @@ function About() {
       </section>
 
       {/* Local connection */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading
             eyebrow="Local"

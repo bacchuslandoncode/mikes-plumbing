@@ -64,7 +64,7 @@ function Services() {
       </PageContainer>
 
       {/* Problem finder */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading
             eyebrow="Get Started"
@@ -93,7 +93,7 @@ function Services() {
       </section>
 
       {/* Primary service categories */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <SectionHeading eyebrow="Categories" title="Primary Services" />
           <div className="service-category-grid">
@@ -124,7 +124,7 @@ function Services() {
       </section>
 
       {/* Urgent vs non-urgent */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading eyebrow="Know The Difference" title="Urgent Or Not?" />
           <div className="urgency-compare">
@@ -155,7 +155,7 @@ function Services() {
       </section>
 
       {/* Emergency callout */}
-      <section className="section section--petrol">
+      <section className="section section--petrol reveal">
         <PageContainer>
           <SectionHeading
             tone="dark"
@@ -168,7 +168,7 @@ function Services() {
       </section>
 
       {/* Process */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading eyebrow="Process" title="How It Works" />
           <ServiceProcess steps={hubProcessSteps} />
@@ -176,7 +176,7 @@ function Services() {
       </section>
 
       {/* FAQ */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <SectionHeading eyebrow="FAQ" title="Service Questions" />
           <div className="faq-list">

@@ -38,7 +38,7 @@ function ServiceAreas() {
       </PageContainer>
 
       {/* Service area grid */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading eyebrow="Where We Work" title="Service Areas" />
           <div className="area-grid">
@@ -55,7 +55,7 @@ function ServiceAreas() {
       </section>
 
       {/* Local concerns */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <SectionHeading eyebrow="Good To Know" title="Plumbing Concerns Common To Local Homes" />
           <ServiceProblemList items={localConcerns} icon={MapPin} />
@@ -63,7 +63,7 @@ function ServiceAreas() {
       </section>
 
       {/* Not sure callout */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading eyebrow="Check With Us" title="Not Sure Whether We Serve Your Area?" />
           <div className="notice-panel">

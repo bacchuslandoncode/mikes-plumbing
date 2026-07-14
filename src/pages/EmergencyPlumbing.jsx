@@ -72,7 +72,7 @@ function EmergencyPlumbing() {
         title="Emergency Plumbing in Phoenix"
         description="Dealing with a plumbing emergency in the Phoenix area? Contact Mike's Plumbing for urgent leaks and drain issues."
       />
-      <section className="section--petrol">
+      <section className="section--petrol reveal">
         <PageContainer>
           <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Emergency Plumbing' }]} />
           <div className="emergency-hero">
@@ -114,7 +114,7 @@ function EmergencyPlumbing() {
       </section>
 
       {/* Emergency examples */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading eyebrow="Examples" title="Common Plumbing Emergencies" />
           <ServiceProblemList items={examples} icon={AlertTriangle} />
@@ -126,7 +126,7 @@ function EmergencyPlumbing() {
       </section>
 
       {/* Before help arrives */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <SectionHeading eyebrow="While You Wait" title="Before Help Arrives" />
           <ServiceProblemList items={beforeHelpArrives} icon={ShieldAlert} />
@@ -134,7 +134,7 @@ function EmergencyPlumbing() {
       </section>
 
       {/* What happens after contacting */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading eyebrow="Next Steps" title="What Happens After You Contact Us" />
           <ServiceProcess steps={afterContactSteps} />
@@ -142,7 +142,7 @@ function EmergencyPlumbing() {
       </section>
 
       {/* Service area reminder */}
-      <section className="section section--petrol area-reminder">
+      <section className="section section--petrol area-reminder reveal">
         <PageContainer>
           <div className="area-reminder__inner">
             <span className="icon-badge icon-badge--dark" aria-hidden="true">
@@ -154,7 +154,7 @@ function EmergencyPlumbing() {
       </section>
 
       {/* FAQ */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <SectionHeading eyebrow="FAQ" title="Emergency Plumbing Questions" />
           <div className="faq-list">

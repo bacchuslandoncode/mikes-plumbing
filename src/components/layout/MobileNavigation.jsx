@@ -32,8 +32,9 @@ function MobileNavigation({ id, isOpen, onClose }) {
       className={`mobile-nav ${isOpen ? 'mobile-nav--open' : ''}`}
       role="dialog"
       aria-modal="true"
+      aria-hidden={!isOpen}
       aria-label="Mobile navigation"
-      hidden={!isOpen}
+      inert={!isOpen}
     >
       <div className="mobile-nav__header">
         <span className="mobile-nav__title">Menu</span>

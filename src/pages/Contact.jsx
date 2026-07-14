@@ -298,7 +298,7 @@ function Contact() {
       </PageContainer>
 
       {/* Emergency callout */}
-      <section className="section section--petrol">
+      <section className="section section--petrol reveal">
         <PageContainer>
           <SectionHeading
             tone="dark"
@@ -313,7 +313,7 @@ function Contact() {
       </section>
 
       {/* Form + details */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <div className="split-band split-band--top">
             <div>

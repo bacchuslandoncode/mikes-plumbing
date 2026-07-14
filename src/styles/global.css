@@ -269,19 +269,36 @@ p {
 }
 
 .site-header__nav a {
+  position: relative;
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--cream-dim);
   padding-block: 0.4rem;
-  border-bottom: 2px solid transparent;
-  transition: color 150ms ease, border-color 150ms ease;
+  transition: color 150ms ease;
   white-space: nowrap;
+}
+
+.site-header__nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--brass);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
 }
 
 .site-header__nav a:hover,
 .site-header__nav a.is-active {
   color: var(--white);
-  border-color: var(--brass);
+}
+
+.site-header__nav a:hover::after,
+.site-header__nav a.is-active::after {
+  transform: scaleX(1);
 }
 
 .site-header__nav .has-children {
@@ -410,10 +427,19 @@ p {
   flex-direction: column;
   padding: var(--space-sm) clamp(1.25rem, 5vw, 2.5rem);
   overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 220ms ease, transform 220ms ease, visibility 0s linear 220ms;
 }
 
-.mobile-nav:not(.mobile-nav--open) {
-  display: none;
+.mobile-nav--open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: opacity 220ms ease, transform 220ms ease, visibility 0s linear;
 }
 
 @media (min-width: 901px) {
@@ -780,6 +806,12 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.service-feature-card:hover .service-feature-card__media img,
+.service-row--media:hover .service-row__media img {
+  transform: scale(1.04);
 }
 
 .responsive-image--framed {
@@ -967,6 +999,7 @@ p {
   padding: 0.9rem 1.25rem;
   z-index: 2;
   min-width: 200px;
+  animation: rise 500ms ease 480ms both;
 }
 
 .home-hero__panel-eyebrow {
@@ -1690,6 +1723,11 @@ p {
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-2xs);
+  transition: background-color 200ms ease;
+}
+
+.service-card-compact:hover {
+  background: var(--cream-dim);
 }
 
 .service-card-compact__index {
@@ -1837,6 +1875,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
+  animation: rise 500ms ease 180ms both;
 }
 
 .emergency-hero__availability {
@@ -1968,6 +2007,7 @@ p {
   border-radius: var(--radius);
   background: var(--white);
   color: var(--graphite);
+  transition: border-color 150ms ease, outline-color 150ms ease;
 }
 
 .contact-form input:focus-visible,
@@ -1991,6 +2031,7 @@ p {
 .contact-form__error {
   font-size: 0.8125rem;
   color: var(--orange);
+  animation: fade-in 180ms ease;
 }
 
 .contact-form__submit {
@@ -2011,6 +2052,7 @@ p {
   border-left: 4px solid var(--brass);
   padding: var(--space-md);
   background: var(--white);
+  animation: rise 350ms ease both;
 }
 
 .form-honeypot {
@@ -2042,4 +2084,75 @@ p {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  .reveal,
+  .reveal .problem-grid > *,
+  .reveal .service-rows > *,
+  .reveal .why-grid > *,
+  .reveal .service-category-row > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Scroll reveal (section entrance, animates once)
+--------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 550ms ease, transform 550ms ease;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Small stagger for grouped items within a revealed section */
+.reveal .problem-grid > *,
+.reveal .service-rows > *,
+.reveal .why-grid > *,
+.reveal .service-category-row > * {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 450ms ease, transform 450ms ease;
+}
+
+.reveal--visible .problem-grid > *,
+.reveal--visible .service-rows > *,
+.reveal--visible .why-grid > *,
+.reveal--visible .service-category-row > * {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal--visible .problem-grid > *:nth-child(1),
+.reveal--visible .service-rows > *:nth-child(1),
+.reveal--visible .why-grid > *:nth-child(1),
+.reveal--visible .service-category-row > *:nth-child(1) {
+  transition-delay: 0ms;
+}
+.reveal--visible .problem-grid > *:nth-child(2),
+.reveal--visible .service-rows > *:nth-child(2),
+.reveal--visible .why-grid > *:nth-child(2),
+.reveal--visible .service-category-row > *:nth-child(2) {
+  transition-delay: 60ms;
+}
+.reveal--visible .problem-grid > *:nth-child(3),
+.reveal--visible .service-rows > *:nth-child(3),
+.reveal--visible .why-grid > *:nth-child(3),
+.reveal--visible .service-category-row > *:nth-child(3) {
+  transition-delay: 120ms;
+}
+.reveal--visible .problem-grid > *:nth-child(4),
+.reveal--visible .service-rows > *:nth-child(4),
+.reveal--visible .why-grid > *:nth-child(4),
+.reveal--visible .service-category-row > *:nth-child(4) {
+  transition-delay: 180ms;
+}
+.reveal--visible .problem-grid > *:nth-child(5),
+.reveal--visible .service-rows > *:nth-child(5),
+.reveal--visible .why-grid > *:nth-child(5) {
+  transition-delay: 240ms;
 }

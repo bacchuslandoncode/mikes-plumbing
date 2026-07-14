@@ -181,7 +181,7 @@ function Home() {
       </PageContainer>
 
       {/* Problem selector */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading
             eyebrow="Get Started"
@@ -210,7 +210,7 @@ function Home() {
       </section>
 
       {/* Core services */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <SectionHeading
             eyebrow="Services"
@@ -267,7 +267,7 @@ function Home() {
       </section>
 
       {/* Emergency interruption */}
-      <section className="section section--petrol">
+      <section className="section section--petrol reveal">
         <PageContainer>
           <div className="split-band">
             <div>
@@ -294,7 +294,7 @@ function Home() {
       </section>
 
       {/* Why Mike's Plumbing */}
-      <section className="section section--petrol">
+      <section className="section section--petrol reveal">
         <PageContainer>
           <SectionHeading tone="dark" eyebrow="Why Us" title="Why Mike's Plumbing" />
           <div className="why-grid">
@@ -315,7 +315,7 @@ function Home() {
       </section>
 
       {/* Process */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <SectionHeading eyebrow="Process" title="How It Works" />
           <div className="process-steps">
@@ -331,7 +331,7 @@ function Home() {
       </section>
 
       {/* Local story */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <div className="story-band">
             <div>
@@ -353,7 +353,7 @@ function Home() {
       </section>
 
       {/* Service area */}
-      <section className="section section--white">
+      <section className="section section--white reveal">
         <PageContainer>
           <div className="split-band split-band--reverse">
             <div>
@@ -389,7 +389,7 @@ function Home() {
       <ReviewsSection />
 
       {/* FAQ */}
-      <section className="section">
+      <section className="section reveal">
         <PageContainer>
           <SectionHeading eyebrow="FAQ" title="Plumbing Questions" />
           <div className="faq-list">
@@ -407,7 +407,7 @@ function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="section section--petrol cta-band">
+      <section className="section section--petrol cta-band reveal">
         <PageContainer>
           <SectionHeading
             tone="dark"
