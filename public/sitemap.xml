@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Domain is a placeholder until the site is deployed to its final address. Update all <loc> values before launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.example.com/</loc></url>
+  <url><loc>https://www.example.com/services</loc></url>
+  <url><loc>https://www.example.com/services/drain-cleaning</loc></url>
+  <url><loc>https://www.example.com/services/water-heaters</loc></url>
+  <url><loc>https://www.example.com/services/faucets-fixtures</loc></url>
+  <url><loc>https://www.example.com/services/plumbing-repairs</loc></url>
+  <url><loc>https://www.example.com/emergency-plumbing</loc></url>
+  <url><loc>https://www.example.com/about</loc></url>
+  <url><loc>https://www.example.com/service-areas</loc></url>
+  <url><loc>https://www.example.com/contact</loc></url>
+</urlset>
